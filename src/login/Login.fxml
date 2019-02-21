@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="487.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <HBox alignment="CENTER" prefHeight="58.0" prefWidth="487.0" style="-fx-background-color: #008e9d;" BorderPane.alignment="CENTER">
+            <children>
+                <Text fx:id="brandName" strokeType="OUTSIDE" strokeWidth="0.0" text="JAVERLIN" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <AnchorPane fx:id="edtPassword" prefHeight="378.0" prefWidth="487.0" BorderPane.alignment="CENTER">
+            <children>
+                <Pane fx:id="backBox" layoutX="30.0" layoutY="30.0" minWidth="400.0" prefHeight="309.0" prefWidth="400.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0" />
+                <Button fx:id="btnLogin" mnemonicParsing="false" prefHeight="32.0" prefWidth="300.0" text="LOGIN" textFill="WHITE" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="260.0" />
+                <JFXTextField fx:id="edtEmail" focusColor="#008e9d" labelFloat="true" prefHeight="30.0" prefWidth="300.0" promptText="Email" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="90.0" />
+                <JFXCheckBox fx:id="ckbRemember" text="Remember me" textFill="#575454" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="210.0" />
+                <Text fx:id="textForgotPassword" fill="#363535" layoutX="309.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot your password ?" underline="true" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="210.0" />
+                <JFXPasswordField fx:id="edtPassword1" focusColor="#008e9d" labelFloat="true" prefHeight="30.0" prefWidth="360.0" promptText="Password" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="145.0" />
+                <Button fx:id="btnRegister" mnemonicParsing="false" prefHeight="32.0" prefWidth="300.0" text="REGISTER" textFill="WHITE" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="305.0" />
+            </children>
+        </AnchorPane>
+    </center>
+   <stylesheets>
+      <URL value="@../style/style.css" />
+      <URL value="@style.css" />
+   </stylesheets>
+</BorderPane>

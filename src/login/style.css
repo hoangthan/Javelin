@@ -1,0 +1,58 @@
+
+.text-field{
+    -fx-font-family: Roboto;
+    -fx-border-radius: 10;
+    -fx-border-width: 5;
+    -fx-font-size: 14;
+    -fx-text-fill: #363535;
+}
+
+*{
+    -fx-primary : #3367d6;
+    -fx-secondary : #d6a233;
+}
+.root{
+    -fx-background-color: #ffffff;
+    -fx-font-family: Roboto;
+}
+
+#topPane{
+    -fx-background-color: #3367d6 ;
+}
+
+#brandName{
+    -fx-fill: #ffff;
+    -fx-font-size: 25;
+    -fx-alignment: center;
+    -fx-font-family: Roboto;
+    -fx-font-weight: Bold;
+}
+
+#edtEmail{
+    -fx-border-style: none none dotted none;
+}
+
+
+#backBox{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 9, 0, 0, 0);
+    -fx-padding: 10;
+    -fx-background-color: #ffff;
+    -fx-background-radius: 0;
+}
+
+.button{
+    -fx-background-color: #00a2b6;
+    -fx-border-radius: 10;
+    -fx-font-family: Roboto;
+    -fx-font-weight: medium;
+    -fx-font-size: 14;
+    -fx-text-fill: #ffffff;
+}
+
+.button:hover{
+    -fx-background-color: #008afb;
+}
+
+.button:pressed{
+    -fx-background-color: #009a4d;
+}
