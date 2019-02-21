@@ -25,5 +25,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="com.sun.mail:javax.mail:1.6.2" level="application" />
+    <orderEntry type="library" name="javax.mail:javax.mail-api:1.6.2" level="application" />
   </component>
 </module>
