@@ -56,3 +56,10 @@
 .button:pressed{
     -fx-background-color: #009a4d;
 }
+
+#btnClose:hover{
+    -fx-background-color: #D50000;
+}
+#btnMinimize:hover{
+    -fx-background-color: #00C853;
+}
