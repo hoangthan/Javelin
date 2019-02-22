@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="487.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="487.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
     <center>
         <AnchorPane fx:id="edtPassword" prefHeight="378.0" prefWidth="487.0" BorderPane.alignment="CENTER">
             <children>
@@ -37,7 +37,7 @@
    <top>
       <VBox prefHeight="72.0" prefWidth="487.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="487.0" style="-fx-background-color: #029bae;">
+            <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="487.0" style="-fx-background-color: #0D904F;">
                <children>
                   <FontAwesomeIconView fx:id="btnMinimize" fill="#00e676" size="20" text="⚫">
                      <HBox.margin>
@@ -51,7 +51,7 @@
                   </FontAwesomeIconView>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="487.0" style="-fx-background-color: #008e9d;">
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="487.0" style="-fx-background-color: #0F9C58;">
                <children>
                   <Text fx:id="brandName" strokeType="OUTSIDE" strokeWidth="0.0" text="JAVERLIN" />
                </children>
