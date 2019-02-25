@@ -13,18 +13,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="487.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="487.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.Controller">
     <center>
         <AnchorPane prefHeight="378.0" prefWidth="487.0" BorderPane.alignment="CENTER">
             <children>
                 <Pane fx:id="backBox" layoutX="30.0" layoutY="30.0" minWidth="400.0" prefHeight="330.0" prefWidth="407.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0" />
                 <JFXTextField fx:id="edtEmail" focusColor="#008e9d" labelFloat="true" prefHeight="30.0" prefWidth="300.0" promptText="Email" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="90.0" />
                 <JFXPasswordField fx:id="edtPassword" focusColor="#008e9d" labelFloat="true" prefHeight="30.0" prefWidth="360.0" promptText="Password" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="145.0" />
-                <Button fx:id="btnRegister" layoutX="91.0" layoutY="324.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="310.0" text="REGISTER" textFill="WHITE" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="324.0" />
-                <JFXProgressBar fx:id="pgbLogin" layoutX="42.0" layoutY="394.0" prefHeight="4.0" prefWidth="406.0" />
-            <JFXPasswordField fx:id="edtRePassword" focusColor="#008e9d" labelFloat="true" prefHeight="30.0" prefWidth="310.0" promptText="Password again" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="200.0" />
-            <JFXTextField fx:id="edtCode" focusColor="#008e9d" labelFloat="true" layoutX="90.0" layoutY="253.0" prefHeight="30.0" prefWidth="235.0" promptText="Code" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="162.0" AnchorPane.topAnchor="255.0" />
-            <Text fx:id="lbSendCode" fill="#0f9c58" layoutX="331.96875" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Send code" AnchorPane.rightAnchor="90.03515625" AnchorPane.topAnchor="270.0" />
+                <Button fx:id="btnRegister" layoutX="91.0" layoutY="324.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="310.0" text="REGISTER" textFill="WHITE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" />
+                <JFXProgressBar fx:id="pgbLogin" layoutX="42.0" layoutY="394.0" prefHeight="4.0" prefWidth="406.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+            <JFXPasswordField fx:id="edtRePassword" focusColor="#008e9d" labelFloat="true" prefHeight="30.0" prefWidth="310.0" promptText="Password again" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="202.0" />
+            <JFXTextField fx:id="edtCode" focusColor="#008e9d" labelFloat="true" layoutX="90.0" layoutY="253.0" prefHeight="30.0" prefWidth="235.0" promptText="Code" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="162.0" AnchorPane.topAnchor="260.0" />
+            <Text fx:id="lbSendCode" fill="#0f9c58" layoutX="331.96875" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Send code" AnchorPane.rightAnchor="90.03515625" AnchorPane.topAnchor="275.0" />
+            <Text fx:id="lbNoti" layoutX="149.0" layoutY="403.44140625" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" />
             </children>
         </AnchorPane>
     </center>
@@ -32,9 +33,9 @@
     <top>
         <VBox prefHeight="72.0" prefWidth="487.0" BorderPane.alignment="CENTER">
             <children>
-                <HBox alignment="CENTER_RIGHT" prefHeight="42.0" prefWidth="487.0" style="-fx-background-color: #0D904F;">
+                <HBox alignment="CENTER_RIGHT" onMouseDragged="#mouseDraged" onMousePressed="#mousePressed" prefHeight="42.0" prefWidth="487.0" style="-fx-background-color: #0D904F;">
                <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="304.0">
+                  <HBox alignment="CENTER_LEFT" onMouseDragged="#mouseDraged" onMousePressed="#mousePressed" prefHeight="27.0" prefWidth="304.0">
                      <children>
                         <FontAwesomeIconView fill="WHITE" size="15" text="🡸">
                            <HBox.margin>
@@ -43,14 +44,14 @@
                         </FontAwesomeIconView>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="CENTER_RIGHT" onMouseDragged="#mouseDraged" onMousePressed="#mousePressed" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <FontAwesomeIconView fx:id="btnMinimize" fill="#00e676" size="20" text="⚫">
+                        <FontAwesomeIconView fx:id="btnMinimize" fill="#00e676" onMouseClicked="#minimize" size="20" text="⚫">
                            <HBox.margin>
                               <Insets right="5.0" />
                            </HBox.margin>
                         </FontAwesomeIconView>
-                        <FontAwesomeIconView fx:id="btnClose" fill="#f44336" glyphName="🔴" glyphStyle="🔴" size="20" text="⚫">
+                        <FontAwesomeIconView fx:id="btnClose" fill="#f44336" glyphName="🔴" glyphStyle="🔴" onMousePressed="#close" size="20" text="⚫">
                            <HBox.margin>
                               <Insets right="15.0" />
                            </HBox.margin>
@@ -59,7 +60,7 @@
                   </HBox>
                </children>
                 </HBox>
-                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="487.0" style="-fx-background-color: #0F9C58;">
+                <HBox alignment="CENTER" onMouseDragged="#mouseDraged" onMousePressed="#mousePressed" prefHeight="60.0" prefWidth="487.0" style="-fx-background-color: #0F9C58;">
                     <children>
                         <Text fx:id="brandName" strokeType="OUTSIDE" strokeWidth="0.0" text="JAVERLIN" />
                     </children>
