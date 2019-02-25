@@ -10,6 +10,8 @@
     -fx-background-color: #F5F5F5;
     -fx-background-radius: 3px;
     -fx-background-color: dodgerblue,  white, white;
+    -fx-font-family: "Roboto";
+    -fx-font-size: 15;
 
 }
 
@@ -19,3 +21,14 @@
     -fx-border-width: 1px;
     -fx-background-color: dodgerblue,  white, white;
 }
+
+.button{
+    -fx-background-color: #0D904F;
+    -fx-border-radius: 10;
+    -fx-font-family: "Roboto Medium";
+    -fx-font-weight: medium;
+    -fx-font-size: 14;
+    -fx-text-fill: #ffffff;
+    -fx-text-alignment: center-left;
+}
+

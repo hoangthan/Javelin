@@ -50,11 +50,11 @@
 }
 
 .button:hover{
-    -fx-background-color: #008afb;
+    -fx-background-color: #005a2c;
 }
 
 .button:pressed{
-    -fx-background-color: #009a4d;
+    -fx-background-color: #c7125e;
 }
 
 /*#btnClose:hover{

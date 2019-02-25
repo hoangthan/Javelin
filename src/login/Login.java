@@ -1,5 +1,6 @@
 package login;
 
+import controller.Validate;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,7 +16,10 @@ public class Login extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.show();
+
     }
+
+
 
     public static void main(String[] args) {
         launch(args);

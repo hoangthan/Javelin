@@ -41,7 +41,7 @@
 }
 
 .button{
-    -fx-background-color: #00a2b6;
+    -fx-background-color: #0F9C58;
     -fx-border-radius: 10;
     -fx-font-family: "Roboto Medium";
     -fx-font-weight: medium;
@@ -50,11 +50,11 @@
 }
 
 .button:hover{
-    -fx-background-color: #008afb;
+    -fx-background-color: #005a2c;
 }
 
 .button:pressed{
-    -fx-background-color: #009a4d;
+    -fx-background-color: #c7125e;
 }
 
 
