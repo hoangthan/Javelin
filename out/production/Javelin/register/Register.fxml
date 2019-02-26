@@ -25,7 +25,7 @@
             <JFXPasswordField fx:id="edtRePassword" focusColor="#008e9d" labelFloat="true" prefHeight="30.0" prefWidth="310.0" promptText="Password again" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="202.0" />
             <JFXTextField fx:id="edtCode" focusColor="#008e9d" labelFloat="true" layoutX="90.0" layoutY="253.0" prefHeight="30.0" prefWidth="235.0" promptText="Code" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="162.0" AnchorPane.topAnchor="260.0" />
             <Text fx:id="lbSendCode" fill="#0f9c58" layoutX="331.96875" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Send code" AnchorPane.rightAnchor="90.03515625" AnchorPane.topAnchor="275.0" />
-            <Text fx:id="lbNoti" fill="#c7125e" layoutX="221.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email is not valid" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="200.0" />
+            <Text fx:id="lbNoti" fill="#c7125e" layoutX="221.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email is not valid" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="195.0" />
             </children>
         </AnchorPane>
     </center>
