@@ -70,6 +70,7 @@ public class Controller implements Initializable {
                     if(edtCode.getText().trim()=="123"){
                         lbNoti.setVisible(false);
                         pgbLogin.setVisible(true);
+
                     }else {
                         lbNoti.setText("Active code is invalid.");
                     }
