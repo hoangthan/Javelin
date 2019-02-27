@@ -15,7 +15,7 @@ public class RequestSocket {
         inputStream = new DataInputStream(socket.getInputStream());
         outputStream = new DataOutputStream(socket.getOutputStream());
 
-        outputStream.writeUTF(email+":"+1); //Set 1 is the flag request active code.
+        outputStream.writeUTF(email+":"+"1"); //Set 1 is the flag request active code.
 
         inputStream.close();
         outputStream.close();

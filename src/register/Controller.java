@@ -10,7 +10,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import socketConnection.RequestSocket;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -84,6 +86,18 @@ public class Controller implements Initializable {
             lbNoti.setText("Email is not valid");
             lbNoti.setVisible(true);
             lbNoti.setStyle("-fx-text-inner-color: #0f9c58;");
+        }
+    }
+
+    @FXML
+    public void sendActiveCode(MouseEvent event)
+    {
+        RequestSocket requestSocket = new RequestSocket();
+
+        try {
+            requestSocket.requestCodeActive(edtEmail.getText().trim());
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
