@@ -26,7 +26,6 @@ public class RequestSocket {
 
         //Send User
         outputStream.writeObject(user);
-
         inputStream.close();
         outputStream.close();
         socket.close();
