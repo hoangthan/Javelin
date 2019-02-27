@@ -1,9 +1,9 @@
 package register;
 
+import model.User;
 import controller.Validate;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
@@ -15,6 +15,8 @@ import socketConnection.RequestSocket;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Controller implements Initializable {
 
@@ -32,6 +34,8 @@ public class Controller implements Initializable {
     ProgressBar pgbLogin;
     @FXML
     TextField edtCode;
+    @FXML
+    Text lbSendCode;
 
     @FXML
     void mouseDraged(MouseEvent event) {
@@ -61,20 +65,21 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    void register(MouseEvent event)
-    {
+    void register(MouseEvent event) throws IOException {
         if(Validate.checkEmail(edtEmail.getText().toLowerCase().trim()))
         {
             if(edtPassword.getText().equals(edtRePassword.getText()))
             {
                 if(Validate.checkPassword(edtPassword.getText()))
                 {
-                    if(edtCode.getText().trim()=="123"){
+                    if(edtCode.getText().length()==7){
                         lbNoti.setVisible(false);
                         pgbLogin.setVisible(true);
+                        User user = new User(edtEmail.getText().trim(),edtPassword.getText().trim(), Long.parseLong(edtCode.getText().trim()));
+                        RequestSocket.sendUser(user);
 
                     }else {
-                        lbNoti.setText("Active code is invalid.");
+                        lbNoti.setText("Active code is not valid");
                     }
                 }else {
                     lbNoti.setText("Password is too weak.");
@@ -92,7 +97,24 @@ public class Controller implements Initializable {
     @FXML
     public void sendActiveCode(MouseEvent event)
     {
+        if(!Validate.checkEmail(edtEmail.getText().trim()))
+        {
+            lbNoti.setText("Email is not valid.");
+            lbNoti.setVisible(true);
+            return;
+        }
         RequestSocket requestSocket = new RequestSocket();
+        lbSendCode.setDisable(true);
+        lbNoti.setVisible(false);
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                lbSendCode.setDisable(false);
+            }
+        };
+
+        Timer timer = new Timer();
+        timer.schedule(timerTask,300);
 
         try {
             requestSocket.requestCodeActive(edtEmail.getText().trim());
