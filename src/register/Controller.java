@@ -79,9 +79,15 @@ public class Controller implements Initializable {
                         pgbLogin.setVisible(true);
                         User user = new User(edtEmail.getText().trim(),edtPassword.getText().trim(), Long.parseLong(edtCode.getText().trim()));
                         try {
+                            lbNoti.setVisible(false);
+                            pgbLogin.setVisible(true);
+                            lbSendCode.setDisable(true);
                             RequestSocket.sendUser(user);
                         } catch (IOException e) {
                             e.printStackTrace();
+                            lbNoti.setText("Network is error.");
+                            pgbLogin.setVisible(false);
+                            lbNoti.setVisible(true);
                         }
 
                     }else {
@@ -103,6 +109,7 @@ public class Controller implements Initializable {
     @FXML
     public void sendActiveCode(MouseEvent event)
     {
+        boolean isSuccess;
         if(!Validate.checkEmail(edtEmail.getText().trim()))
         {
             lbNoti.setText("Email is not valid.");
@@ -122,8 +129,19 @@ public class Controller implements Initializable {
         timer.schedule(timerTask,120000);
 
         try {
-            requestSocket.requestCodeActive(edtEmail.getText().trim());
+           isSuccess =  requestSocket.requestCodeActive(edtEmail.getText().trim());
+           if(isSuccess){
+                pgbLogin.setVisible(false);
+                lbNoti.setText("Please to check your email.");
+                lbNoti.setVisible(true);
+           }else {
+               pgbLogin.setVisible(false);
+               lbNoti.setText("Can't send code to your email.");
+               lbNoti.setVisible(true);
+           }
         } catch (IOException e) {
+            lbNoti.setText("Network is error.");
+            lbNoti.setVisible(true);
             e.printStackTrace();
         }
     }

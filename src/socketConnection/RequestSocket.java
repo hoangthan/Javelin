@@ -12,16 +12,21 @@ public class RequestSocket {
     DataOutputStream outputStream = null;
 
 
-    public void requestCodeActive(String email) throws IOException {
+    public boolean requestCodeActive(String email) throws IOException {
+        Boolean result;
         socket = new Socket("localhost",2307);
         inputStream = new DataInputStream(socket.getInputStream());
         outputStream = new DataOutputStream(socket.getOutputStream());
 
         outputStream.writeUTF(email+":"+"101"); //Set 101 is the flag request active code.
+        result =  inputStream.readBoolean();        //Get the result response from server if request success
+        System.out.println("The result is: "+ result);
         //Close all the connection, return resource
         inputStream.close();
         outputStream.close();
         socket.close();
+
+        return result;
     }
 
     public static void sendUser(User user) throws IOException {
