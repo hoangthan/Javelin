@@ -1,10 +1,6 @@
-package model;
+package Model;
 
-import java.io.Serializable;
-
-public class User implements Serializable {
-
-    private static final long serialVersionUID = 6506698692544269657L;
+public class User {
     public String email;
     public String password;
     public long code;

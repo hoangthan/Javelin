@@ -1,9 +1,10 @@
 package register;
 
-import model.User;
+import Model.User;
 import controller.Validate;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
@@ -65,7 +66,8 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    void register(MouseEvent event) throws IOException {
+    void register(MouseEvent event)
+    {
         if(Validate.checkEmail(edtEmail.getText().toLowerCase().trim()))
         {
             if(edtPassword.getText().equals(edtRePassword.getText()))
@@ -76,10 +78,14 @@ public class Controller implements Initializable {
                         lbNoti.setVisible(false);
                         pgbLogin.setVisible(true);
                         User user = new User(edtEmail.getText().trim(),edtPassword.getText().trim(), Long.parseLong(edtCode.getText().trim()));
-                        RequestSocket.sendUser(user);
+                        try {
+                            RequestSocket.sendUser(user);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
 
                     }else {
-                        lbNoti.setText("Active code is not valid");
+                        lbNoti.setText("Active code is invalid.");
                     }
                 }else {
                     lbNoti.setText("Password is too weak.");
@@ -104,7 +110,6 @@ public class Controller implements Initializable {
             return;
         }
         RequestSocket requestSocket = new RequestSocket();
-        lbSendCode.setDisable(true);
         lbNoti.setVisible(false);
         TimerTask timerTask = new TimerTask() {
             @Override
@@ -112,9 +117,9 @@ public class Controller implements Initializable {
                 lbSendCode.setDisable(false);
             }
         };
-
+        lbSendCode.setDisable(true);
         Timer timer = new Timer();
-        timer.schedule(timerTask,300);
+        timer.schedule(timerTask,120000);
 
         try {
             requestSocket.requestCodeActive(edtEmail.getText().trim());
