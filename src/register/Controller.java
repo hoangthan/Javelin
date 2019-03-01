@@ -1,11 +1,11 @@
 package register;
 
-import Model.User;
+import model.User;
 import controller.Validate;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -66,8 +66,7 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    void register(MouseEvent event)
-    {
+    void register(MouseEvent event) throws IOException {
         if(Validate.checkEmail(edtEmail.getText().toLowerCase().trim()))
         {
             if(edtPassword.getText().equals(edtRePassword.getText()))
@@ -77,7 +76,8 @@ public class Controller implements Initializable {
                     if(edtCode.getText().length()==7){
                         lbNoti.setVisible(false);
                         pgbLogin.setVisible(true);
-                        User user = new User(edtEmail.getText().trim(),edtPassword.getText().trim(), Long.parseLong(edtCode.getText().trim()));
+                        User user = new User(edtEmail.getText().trim(),edtPassword.getText(), Long.parseLong(edtCode.getText().trim()));
+                        sendUser(user);
                         try {
                             lbNoti.setVisible(false);
                             pgbLogin.setVisible(true);
@@ -89,7 +89,6 @@ public class Controller implements Initializable {
                             pgbLogin.setVisible(false);
                             lbNoti.setVisible(true);
                         }
-
                     }else {
                         lbNoti.setText("Active code is invalid.");
                     }
@@ -106,12 +105,29 @@ public class Controller implements Initializable {
         }
     }
 
+    private void sendUser(User user) throws IOException {
+        user.setRequestCode(103);
+        boolean result;
+        result = RequestSocket.sendUser(user);
+        if(result){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success");
+            alert.setHeaderText("Congratulations!!!");
+            alert.setContentText("Login to use Javelin.");
+        }else {
+            lbNoti.setText("Register fail.");
+            lbNoti.setVisible(true);
+        }
+    }
+
     @FXML
     public void sendActiveCode(MouseEvent event)
     {
         boolean isSuccess;
+        pgbLogin.setVisible(true);
         if(!Validate.checkEmail(edtEmail.getText().trim()))
         {
+            pgbLogin.setVisible(false);
             lbNoti.setText("Email is not valid.");
             lbNoti.setVisible(true);
             return;
@@ -130,18 +146,20 @@ public class Controller implements Initializable {
 
         try {
            isSuccess =  requestSocket.requestCodeActive(edtEmail.getText().trim());
+           Thread.sleep(1000);
+           pgbLogin.setVisible(false);
            if(isSuccess){
-                pgbLogin.setVisible(false);
                 lbNoti.setText("Please to check your email.");
                 lbNoti.setVisible(true);
            }else {
-               pgbLogin.setVisible(false);
-               lbNoti.setText("Can't send code to your email.");
+               lbNoti.setText("This email is already registed.");
                lbNoti.setVisible(true);
            }
         } catch (IOException e) {
             lbNoti.setText("Network is error.");
             lbNoti.setVisible(true);
+            e.printStackTrace();
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }

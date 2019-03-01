@@ -1,9 +1,13 @@
-package Model;
+package model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     public String email;
     public String password;
     public long code;
+    public int requestCode;
+    private static final long serialVersionUID = 4844442346911158547L;
 
     public User() {
     }
@@ -43,4 +47,13 @@ public class User {
     public void setCode(long code) {
         this.code = code;
     }
+
+    public int getRequestCode() {
+        return requestCode;
+    }
+
+    public void setRequestCode(int requestCode) {
+        this.requestCode = requestCode;
+    }
+
 }

@@ -1,6 +1,6 @@
 package socketConnection;
 
-import Model.User;
+import model.User;
 
 import java.io.*;
 import java.net.Socket;
@@ -29,16 +29,20 @@ public class RequestSocket {
         return result;
     }
 
-    public static void sendUser(User user) throws IOException {
+    public static boolean sendUser(User user) throws IOException {
         Socket socket = new Socket("localhost",2308);
         ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
         ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
+        DataInputStream dataInputStream =  new DataInputStream(socket.getInputStream());
 
-        //Send User
-        outputStream.writeObject(user);
+        outputStream.writeObject(user);  //Send user
+        boolean result = dataInputStream.readBoolean(); //Get response from server
+
         inputStream.close();
         outputStream.close();
+        dataInputStream.close();
         socket.close();
+        return result;
     }
 
 }
