@@ -109,11 +109,18 @@ public class Controller implements Initializable {
         user.setRequestCode(103);
         boolean result;
         result = RequestSocket.sendUser(user);
+        System.out.println("The result: "+result);
         if(result){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Success");
             alert.setHeaderText("Congratulations!!!");
             alert.setContentText("Login to use Javelin.");
+            edtCode.setText("");
+            edtPassword.setText("");
+            edtRePassword.setText("");
+            edtEmail.setText("");
+            alert.showAndWait();
+            pgbLogin.setVisible(false);
         }else {
             lbNoti.setText("Register fail.");
             lbNoti.setVisible(true);

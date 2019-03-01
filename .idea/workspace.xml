@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javelin/Model/File.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/Model/File.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javelin/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/Model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javelin/login/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/login/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javelin/login/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/login/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javelin/register/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/register/Controller$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javelin/register/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/register/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javelin/socketConnection/RequestSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/socketConnection/RequestSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/File.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/register/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/register/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/socketConnection/RequestSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socketConnection/RequestSocket.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -72,11 +59,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/register/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="110" column="35" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
+            <state relative-caret-position="220">
+              <caret line="122" column="39" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
               <folding>
                 <element signature="method#mouseDraged#0;class#Controller#0" />
                 <element signature="method#mousePressed#0;class#Controller#0" />
@@ -102,10 +89,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="-252">
               <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
               <folding>
                 <element signature="e#473#474#0" expanded="true" />
@@ -168,9 +155,9 @@
         <option value="$PROJECT_DIR$/src/login/Login.fxml" />
         <option value="$PROJECT_DIR$/src/login/Controller.java" />
         <option value="$PROJECT_DIR$/src/socketConnection/RequestSocket.java" />
-        <option value="$PROJECT_DIR$/src/register/Controller.java" />
         <option value="$PROJECT_DIR$/src/Model/User.java" />
         <option value="$PROJECT_DIR$/src/model/User.java" />
+        <option value="$PROJECT_DIR$/src/register/Controller.java" />
       </list>
     </option>
   </component>
@@ -256,7 +243,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551404431312" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551407456577" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -427,12 +414,12 @@
       <workItem from="1551064318410" duration="3134000" />
       <workItem from="1551072620724" duration="30531000" />
       <workItem from="1551181442703" duration="7905000" />
-      <workItem from="1551318252643" duration="22775000" />
+      <workItem from="1551318252643" duration="23265000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103707000" />
+    <option name="totallyTimeSpent" value="104197000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -445,6 +432,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Learn" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.2065053" />
@@ -703,22 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/register/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="110" column="35" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
-          <folding>
-            <element signature="method#mouseDraged#0;class#Controller#0" />
-            <element signature="method#mousePressed#0;class#Controller#0" />
-            <element signature="method#minimize#0;class#Controller#0" />
-            <element signature="method#close#0;class#Controller#0" />
-            <element signature="e#2147#2398#0" />
-            <element signature="e#2999#3160#1" />
-            <element signature="method#initialize#0;class#Controller#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/socketConnection/RequestSocket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8">
@@ -731,11 +703,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="-252">
           <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding>
             <element signature="e#473#474#0" expanded="true" />
             <element signature="e#501#502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/register/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="122" column="39" selection-start-line="122" selection-start-column="39" selection-end-line="122" selection-end-column="39" />
+          <folding>
+            <element signature="method#mouseDraged#0;class#Controller#0" />
+            <element signature="method#mousePressed#0;class#Controller#0" />
+            <element signature="method#minimize#0;class#Controller#0" />
+            <element signature="method#close#0;class#Controller#0" />
+            <element signature="e#2147#2398#0" />
+            <element signature="e#2999#3160#1" />
+            <element signature="method#initialize#0;class#Controller#0" />
           </folding>
         </state>
       </provider>
