@@ -1,5 +1,6 @@
 package register;
 
+import fileHandler.TokenFile;
 import model.User;
 import controller.Validate;
 import javafx.fxml.FXML;
@@ -107,10 +108,10 @@ public class Controller implements Initializable {
 
     private void sendUser(User user) throws IOException {
         user.setRequestCode(103);
-        boolean result;
-        result = RequestSocket.sendUser(user);
-        System.out.println("The result: "+result);
-        if(result){
+        String token;
+        token = RequestSocket.sendUser(user);
+        System.out.println("The token: "+token);
+        if(token!=null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Success");
             alert.setHeaderText("Congratulations!!!");
@@ -121,6 +122,8 @@ public class Controller implements Initializable {
             edtEmail.setText("");
             alert.showAndWait();
             pgbLogin.setVisible(false);
+            //Save token for the next login
+            new TokenFile().setToken(token);
         }else {
             lbNoti.setText("Register fail.");
             lbNoti.setVisible(true);

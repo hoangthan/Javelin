@@ -2,16 +2,16 @@ package model;
 
 import java.util.ArrayList;
 
-public class File {
+public class FileObject {
 
     private String name;
     private String owner;
     private ArrayList<String> viewers;
 
-    public File() {
+    public FileObject() {
     }
 
-    public File(String name, String owner, ArrayList<String> viewers) {
+    public FileObject(String name, String owner, ArrayList<String> viewers) {
         this.name = name;
         this.owner = owner;
         this.viewers = viewers;
