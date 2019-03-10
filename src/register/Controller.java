@@ -109,11 +109,7 @@ public class Controller implements Initializable {
     private void sendUser(User user)  {
         user.setRequestCode(103);
         String token = null;
-        try {
-            token = RequestSocket.sendUser(user);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        token = RequestSocket.sendUser(user);
         System.out.println("The token: "+token);
         if(token!=null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

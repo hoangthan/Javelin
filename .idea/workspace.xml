@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javelin/register/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/register/Controller$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javelin/register/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/register/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/login/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recoverPassword/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recoverPassword/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recoverPassword/RecoverPassWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recoverPassword/RecoverPassWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recoverPassword/RecoverPassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/recoverPassword/RecoverPassword.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/register/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/register/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/token.txt" beforeDir="false" afterPath="$PROJECT_DIR$/token.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/socketConnection/RequestSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socketConnection/RequestSocket.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,21 +65,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/register/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1176">
+              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initialize#0;class#Controller#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/login/Login.fxml">
+        <entry file="file://$PROJECT_DIR$/src/recoverPassword/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/recoverPassword/RecoverPassword.fxml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="17" column="245" selection-start-line="17" selection-start-column="214" selection-end-line="17" selection-end-column="245" />
+            <state relative-caret-position="244">
+              <caret line="15" column="293" selection-start-line="15" selection-start-column="293" selection-end-line="15" selection-end-column="293" />
             </state>
           </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/login/Controller.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/register/Register.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="252">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="24" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/recoverPassword/RecoverPassWord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="263">
+              <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,6 +143,8 @@
       <find>control</find>
       <find>error</find>
       <find>sendUser</find>
+      <find>2307</find>
+      <find>101</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -124,7 +164,6 @@
         <option value="$PROJECT_DIR$/src/Model/File.java" />
         <option value="$PROJECT_DIR$/src/Home/Style.fxml" />
         <option value="$PROJECT_DIR$/src/register/Style.css" />
-        <option value="$PROJECT_DIR$/src/recoverPassword/RecoverPassword.fxml" />
         <option value="$PROJECT_DIR$/src/Home/Home.fxml" />
         <option value="$PROJECT_DIR$/src/login/style.css" />
         <option value="$PROJECT_DIR$/src/Home/Style.css" />
@@ -141,12 +180,15 @@
         <option value="$PROJECT_DIR$/src/login/Login.fxml" />
         <option value="$PROJECT_DIR$/src/Model/User.java" />
         <option value="$PROJECT_DIR$/src/model/User.java" />
-        <option value="$PROJECT_DIR$/src/socketConnection/RequestSocket.java" />
         <option value="$PROJECT_DIR$/src/model/File.java" />
         <option value="$PROJECT_DIR$/src/model/FileObject.java" />
         <option value="$PROJECT_DIR$/src/fileHandler/TokenFile.java" />
-        <option value="$PROJECT_DIR$/src/register/Controller.java" />
+        <option value="$PROJECT_DIR$/src/socketConnection/RequestSocket.java" />
         <option value="$PROJECT_DIR$/src/login/Controller.java" />
+        <option value="$PROJECT_DIR$/src/recoverPassword/RecoverPassWord.java" />
+        <option value="$PROJECT_DIR$/src/register/Controller.java" />
+        <option value="$PROJECT_DIR$/src/recoverPassword/Controller.java" />
+        <option value="$PROJECT_DIR$/src/recoverPassword/RecoverPassword.fxml" />
       </list>
     </option>
   </component>
@@ -190,25 +232,19 @@
               <item name="Javelin" type="b2602c69:ProjectViewProjectNode" />
               <item name="Javelin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fileHandler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Javelin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Javelin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Javelin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Javelin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="recoverPassword" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Javelin" type="b2602c69:ProjectViewProjectNode" />
               <item name="Javelin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="register" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Javelin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Javelin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="socketConnection" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -232,7 +268,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552230190375" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552239683789" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JavelinServer" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -261,7 +297,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Register">
+  <component name="RunManager" selected="Application.RecoverPassWord">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -292,6 +328,20 @@
       </extension>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RecoverPassWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="recoverPassword.RecoverPassWord" />
+      <module name="Javelin" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="recoverPassword.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -377,6 +427,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RecoverPassWord" />
         <item itemvalue="Application.Register" />
         <item itemvalue="Application.RequestSocket" />
         <item itemvalue="Application.SendEmail" />
@@ -408,7 +459,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116252000" />
+    <option name="totallyTimeSpent" value="122673000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -432,8 +483,8 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.25231177" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2090784" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.2517194" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25722146" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -442,7 +493,7 @@
       <window_info anchor="bottom" id="Problems" order="8" />
       <window_info anchor="bottom" id="Changes" order="9" />
       <window_info anchor="bottom" id="Profiler" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.56806725" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.18982118" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.1104" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.13613446" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
@@ -518,20 +569,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/signUp/SignUp.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/recoverPassword/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/recoverPassword/RecoverPassWord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../JavelinServer/src/sendEmail/SendEmail.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
@@ -548,14 +585,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model.java" />
     <entry file="file://$PROJECT_DIR$/src/Home/Style.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/recoverPassword/RecoverPassword.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="66" column="23" lean-forward="true" selection-start-line="66" selection-start-column="23" selection-end-line="66" selection-end-column="23" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Home/Home.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -637,16 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/register/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/io/DataInputStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -664,63 +683,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/socketConnection/RequestSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/register/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2845">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#Controller#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/register/Register.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/Login.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="17" column="245" selection-start-line="17" selection-start-column="214" selection-end-line="17" selection-end-column="245" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="336">
           <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fileHandler/TokenFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="84">
+          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/socketConnection/RequestSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-175">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/login/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="259">
+          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/Login.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="17" column="245" selection-start-line="17" selection-start-column="214" selection-end-line="17" selection-end-column="245" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/register/Register.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/recoverPassword/RecoverPassWord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/register/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/recoverPassword/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="57" column="5" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/recoverPassword/RecoverPassword.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="15" column="293" selection-start-line="15" selection-start-column="293" selection-end-line="15" selection-end-column="293" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/register/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1176">
+          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initialize#0;class#Controller#0" />
           </folding>
         </state>
       </provider>
