@@ -78,13 +78,13 @@ public class Controller implements Initializable {
                         lbNoti.setVisible(false);
                         pgbLogin.setVisible(true);
                         User user = new User(edtEmail.getText().trim(),edtPassword.getText(), Long.parseLong(edtCode.getText().trim()));
-                        sendUser(user);
+
                         try {
                             lbNoti.setVisible(false);
                             pgbLogin.setVisible(true);
                             lbSendCode.setDisable(true);
-                            RequestSocket.sendUser(user);
-                        } catch (IOException e) {
+                            sendUser(user);
+                        } catch (Exception e) {
                             e.printStackTrace();
                             lbNoti.setText("Network is error.");
                             pgbLogin.setVisible(false);
@@ -106,10 +106,14 @@ public class Controller implements Initializable {
         }
     }
 
-    private void sendUser(User user) throws IOException {
+    private void sendUser(User user)  {
         user.setRequestCode(103);
-        String token;
-        token = RequestSocket.sendUser(user);
+        String token = null;
+        try {
+            token = RequestSocket.sendUser(user);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("The token: "+token);
         if(token!=null){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
