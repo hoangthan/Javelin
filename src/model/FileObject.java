@@ -1,20 +1,32 @@
 package model;
 
-import java.util.ArrayList;
+import java.io.Serializable;
 
-public class FileObject {
+public class FileObject implements Serializable {
+    private static final long serialVersionUID = 1682768651715909261L;
 
-    private String name;
-    private String owner;
-    private ArrayList<String> viewers;
+    String name;
+    long fileID;
+    long size;
+    String URI;
+    long ownerID;
+    String parent = "root";
+    boolean isFile;
 
-    public FileObject() {
+    public FileObject(long ownerID, String parent) {
+        this.ownerID = ownerID;
+        this.parent = parent;
     }
 
-    public FileObject(String name, String owner, ArrayList<String> viewers) {
+    public FileObject(String name, long size, String URI, String parent, boolean isFile) {
         this.name = name;
-        this.owner = owner;
-        this.viewers = viewers;
+        this.size = size;
+        this.URI = URI;
+        this.parent = parent;
+        this.isFile = isFile;
+    }
+
+    public FileObject() {
     }
 
     public String getName() {
@@ -25,19 +37,51 @@ public class FileObject {
         this.name = name;
     }
 
-    public String getOwner() {
-        return owner;
+    public long getFileID() {
+        return fileID;
     }
 
-    public void setOwner(String owner) {
-        this.owner = owner;
+    public void setFileID(long fileID) {
+        this.fileID = fileID;
     }
 
-    public ArrayList<String> getViewers() {
-        return viewers;
+    public long getSize() {
+        return size;
     }
 
-    public void setViewers(ArrayList<String> viewers) {
-        this.viewers = viewers;
+    public void setSize(long size) {
+        this.size = size;
+    }
+
+    public String getURI() {
+        return URI;
+    }
+
+    public void setURI(String URI) {
+        this.URI = URI;
+    }
+
+    public long getOwnerID() {
+        return ownerID;
+    }
+
+    public void setOwnerID(long ownerID) {
+        this.ownerID = ownerID;
+    }
+
+    public String getParent() {
+        return parent;
+    }
+
+    public void setParent(String parent) {
+        this.parent = parent;
+    }
+
+    public boolean isFile() {
+        return isFile;
+    }
+
+    public void setFile(boolean file) {
+        isFile = file;
     }
 }

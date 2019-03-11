@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="570.0" minWidth="900.0" prefHeight="597.0" prefWidth="900.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="570.0" minWidth="900.0" prefHeight="597.0" prefWidth="900.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controller">
    <top>
       <VBox prefHeight="116.0" prefWidth="898.0" BorderPane.alignment="CENTER">
          <children>
@@ -25,7 +25,7 @@
                               <Image url="@../res/icon.png" />
                            </image>
                            <HBox.margin>
-                              <Insets left="20.0" top="10.0" />
+                              <Insets left="10.0" top="10.0" />
                            </HBox.margin>
                         </ImageView>
                         <Text fx:id="brandName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Javelin">
@@ -35,7 +35,7 @@
                         </Text>
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" layoutX="185.0" prefHeight="116.0" prefWidth="721.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+                  <HBox alignment="CENTER" layoutX="185.0" onMouseDragged="#mouseDraged" onMousePressed="#mousePressed" prefHeight="116.0" prefWidth="721.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="185.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <JFXTextField fx:id="seachBox" focusColor="#009442" prefHeight="35.0" prefWidth="480.0" promptText="🔍 Seach..." style="-fx-region-border: #f44336;" unFocusColor="#009007" />
                      </children>
@@ -55,9 +55,9 @@
    <left>
       <AnchorPane prefHeight="481.0" prefWidth="191.0" style="-fx-background-color: #0D904F;" BorderPane.alignment="TOP_LEFT">
          <children>
-            <VBox layoutX="-3.0" layoutY="-3.0" prefHeight="456.0" prefWidth="185.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox layoutX="-3.0" layoutY="-3.0" prefHeight="481.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <JFXButton layoutX="10.0" layoutY="330.0" prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="Upload                    ">
+                  <JFXButton fx:id="btnUpload" layoutX="10.0" layoutY="330.0" prefHeight="100.0" prefWidth="204.0" style="-fx-background-color: #0F9C58;" text="Upload                    ">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -66,7 +66,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="My drive                   ">
+                  <JFXButton fx:id="btnMyDrive" onMouseClicked="#myDrive" prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="My drive                   ">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -78,7 +78,7 @@
                         <Insets />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="Share with me        ">
+                  <JFXButton fx:id="btnShareWithMe" prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="Share with me        ">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -87,7 +87,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="Trash                        ">
+                  <JFXButton fx:id="btnTrash" prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="Trash                        ">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -98,7 +98,7 @@
                   </JFXButton>
                   <JFXButton prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="Settings                  ">
                      <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="btnSetting" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../res/settings.png" />
                            </image>
