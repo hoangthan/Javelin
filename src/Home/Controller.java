@@ -16,7 +16,9 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.ContextMenuEvent;
+import javafx.scene.input.DragEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.input.TransferMode;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
@@ -29,6 +31,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
@@ -103,13 +106,40 @@ public class Controller implements Initializable {
 
     @FXML
     public void upload(MouseEvent mouseEvent) throws IOException {
-        /*Stage stage = (Stage) paneRoot.getScene().getWindow();
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Pick your file you want to upload.");
-        File file =  fileChooser.showOpenDialog(stage);*/
-        Image image = new Image("images/baseline-add_circle_outline-24px.svg");
+        Image image = new Image("images/addFile.jpg");
         ImageView imageView = new ImageView(image);
+        paneRoot.setCenter(imageView);
+        imageView.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                Stage stage = (Stage) paneRoot.getScene().getWindow();
+                FileChooser fileChooser = new FileChooser();
+                fileChooser.setTitle("Pick your file you want to upload.");
+                File file =  fileChooser.showOpenDialog(stage);
+                System.out.println(file.getName());
+            }
+        });
+
+        Node node = paneRoot.getCenter();
+        node.setOnDragOver(new EventHandler<DragEvent>() {
+            @Override
+            public void handle(DragEvent event) {
+                if(event.getDragboard().hasFiles()){
+                    event.acceptTransferModes(TransferMode.ANY);
+                }
+            }
+        });
+
+        node.setOnDragDropped(new EventHandler<DragEvent>() {
+            @Override
+            public void handle(DragEvent event) {
+                List<File> files = event.getDragboard().getFiles();
+                System.out.println(files.get(0).getName());
+            }
+        });
 
     }
+
+
 
 }
