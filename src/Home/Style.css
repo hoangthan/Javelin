@@ -32,3 +32,11 @@
     -fx-text-alignment: center-left;
 }
 
+@font-face {
+    -fx-font-family: "Roboto Medium";
+    font-family: "Roboto Medium";
+}
+
+*{
+    -fx-font-family: "Roboto Medium";
+}
