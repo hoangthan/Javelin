@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXProgressBar?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ContextMenu?>
@@ -68,7 +69,7 @@
                       <MenuItem mnemonicParsing="false" text="⇩ Download" />
                         <MenuItem mnemonicParsing="false" text="❌ Delete" />
                         <MenuItem mnemonicParsing="false" text="📖 Rename" />
-                        <MenuItem mnemonicParsing="false" text="❌ Delete" />
+                        <MenuItem mnemonicParsing="false" text="❌ Share" />
                     </items>
                   </ContextMenu>
                </contextMenu>
@@ -133,4 +134,7 @@
             </VBox>
          </children></AnchorPane>
    </left>
+   <bottom>
+      <JFXProgressBar fx:id="progressBar" prefHeight="0.0" prefWidth="1045.0" progress="1.0" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>
