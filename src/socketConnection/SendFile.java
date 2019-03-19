@@ -8,15 +8,14 @@ import java.util.List;
 
 public class SendFile {
 
-    private static String token = new TokenFile().getToken();
-
     public static boolean send(List<File> files) {
-
+        String token = new TokenFile().getToken();
         try {
             for(File file: files) System.out.println(file.getName() + ": " +file.getPath());
             Socket socket = new Socket("localhost",2310);
             DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
             DataOutputStream dataOutputStream =  new DataOutputStream(socket.getOutputStream());
+            System.out.println("Token in client: "+token);
             dataOutputStream.writeUTF(token);             //Send the token to authentication
             boolean auth = dataInputStream.readBoolean(); //Get the authenticaction result.
             if(!auth){
