@@ -83,17 +83,17 @@ public class Controller implements Initializable {
         ArrayList<FileObject> list;
         FileObject fileObject = new FileObject();
         fileObject.setParent("root");
-        list = SendFileObject.getResult(fileObject);
+        list = new SendFileObject().getResult(fileObject);
+
         paneRoot.setCenter(nodeTemp1);
         paneContent.getChildren().clear();
 
         Image image = new Image("images/docx.png");
-        for(int i=0;i<100;i++){
-
+        for(FileObject object: list){
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(60);
             imageView.setFitHeight(60);
-            Text text = new Text("Hello world");
+            Text text = new Text(object.getName());
             VBox vBox = new VBox();
             vBox.getChildren().addAll(imageView,text);
             paneContent.getChildren().add(vBox);

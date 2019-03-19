@@ -10,15 +10,20 @@ import java.util.ArrayList;
 public class SendFileObject {
 
     static String token = new TokenFile().getToken();
+    Socket socket = null;
+    ObjectOutputStream objectOutputStream = null;
+    ObjectInputStream objectInputStream = null;
+    DataInputStream dataInputStream;
+    DataOutputStream dataOutputStream;
 
-    public static ArrayList<FileObject> getResult(FileObject file){
+    public  ArrayList<FileObject> getResult(FileObject file){
         ArrayList<FileObject> list = null;
         try {
-            Socket socket = new Socket("localhost",2309);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
-            ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
-            DataInputStream dataInputStream =  new DataInputStream(socket.getInputStream());
-            DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
+            socket = new Socket("localhost",2309);
+            objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
+            objectInputStream = new ObjectInputStream(socket.getInputStream());
+            dataInputStream =  new DataInputStream(socket.getInputStream());
+            dataOutputStream = new DataOutputStream(socket.getOutputStream());
 
             //Send token and get UserID
             dataOutputStream.writeUTF(token);
