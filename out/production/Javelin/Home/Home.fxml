@@ -103,7 +103,7 @@
                         <Insets />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="btnShareWithMe" prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="Share with me        ">
+                  <JFXButton fx:id="btnShareWithMe" onMouseClicked="#getShareWithMe" prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="Share with me        ">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>

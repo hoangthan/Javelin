@@ -8,20 +8,25 @@ import java.util.List;
 
 public class SendFile {
 
-    public static boolean send(List<File> files) {
+    Socket socket = null;
+    DataInputStream dataInputStream = null;
+    DataOutputStream dataOutputStream = null;
+
+    public boolean send(List<File> files) {
         String token = new TokenFile().getToken();
         try {
-            for(File file: files) System.out.println(file.getName() + ": " +file.getPath());
-            Socket socket = new Socket("localhost",2310);
-            DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
-            DataOutputStream dataOutputStream =  new DataOutputStream(socket.getOutputStream());
+            socket = new Socket("localhost",2310);
+            dataInputStream = new DataInputStream(socket.getInputStream());
+            dataOutputStream =  new DataOutputStream(socket.getOutputStream());
             System.out.println("Token in client: "+token);
             dataOutputStream.writeUTF(token);             //Send the token to authentication
             boolean auth = dataInputStream.readBoolean(); //Get the authenticaction result.
+
             if(!auth){
                 return false;                             //If token is not valid, notice for client.
             }
 
+            dataOutputStream.writeUTF("upload");     //Send the message : I want to upload file.
             dataOutputStream.writeInt(files.size()  );      //Send number of file to server.
             for(File file: files){
                 dataOutputStream.writeUTF(file.getName());  //Send the name of file before
@@ -39,7 +44,7 @@ public class SendFile {
         return true;
     }
 
-    private static void sendFile(Socket socket, File file) throws IOException {
+    private  void sendFile(Socket socket, File file) throws IOException {
         DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
         FileInputStream fis = new FileInputStream(file);
         byte[] buffer = new byte[4096];

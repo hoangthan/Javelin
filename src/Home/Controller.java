@@ -23,6 +23,7 @@ import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import model.FileObject;
+import socketConnection.GetSharedFile;
 import socketConnection.SendFile;
 import socketConnection.SendFileObject;
 
@@ -48,6 +49,8 @@ public class Controller implements Initializable {
     AnchorPane paneCenter;
     @FXML
     ProgressBar progressBar;
+    @FXML
+    Button btnMyDrive;
 
     Node nodeTemp1;
     Image image;
@@ -79,29 +82,30 @@ public class Controller implements Initializable {
 
     @FXML
     public void myDrive(MouseEvent mouseEvent){
-        progressBar.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);  //Running effect
-        ArrayList<FileObject> list;
-        FileObject fileObject = new FileObject();
-        fileObject.setParent("root");
-        list = new SendFileObject().getResult(fileObject);
+            progressBar.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);  //Running effect
+            ArrayList<FileObject> list;
+            FileObject fileObject = new FileObject();
+            fileObject.setParent("root");
+            list = new SendFileObject().getResult(fileObject);
 
-        paneRoot.setCenter(nodeTemp1);
-        paneContent.getChildren().clear();
+            paneRoot.setCenter(nodeTemp1);
+            paneContent.getChildren().clear();
 
-        Image image = new Image("images/docx.png");
-        for(FileObject object: list){
-            ImageView imageView = new ImageView(image);
-            imageView.setFitWidth(60);
-            imageView.setFitHeight(60);
-            Text text = new Text(object.getName());
-            VBox vBox = new VBox();
-            vBox.getChildren().addAll(imageView,text);
-            paneContent.getChildren().add(vBox);
-            vBox.setOnMouseClicked(e -> {
-                vBox.setBackground(new Background(new BackgroundFill(Color.web("#b2bec3"), CornerRadii.EMPTY, Insets.EMPTY)));
-            });
-        }
-        progressBar.setProgress(1);
+            Image image = null;
+            for(FileObject object: list){
+                image = getImageByExtension(getFileExtension(object.getName()));
+                ImageView imageView = new ImageView(image);
+                imageView.setFitWidth(60);
+                imageView.setFitHeight(60);
+                Text text = new Text(handleNameFile(object.getName()));
+                VBox vBox = new VBox();
+                vBox.getChildren().addAll(imageView,text);
+                paneContent.getChildren().add(vBox);
+                vBox.setOnMouseClicked(e -> {
+                    vBox.setBackground(new Background(new BackgroundFill(Color.web("#b2bec3"), CornerRadii.EMPTY, Insets.EMPTY)));
+                });
+            }
+            progressBar.setProgress(1);
     }
 
     @FXML
@@ -140,9 +144,37 @@ public class Controller implements Initializable {
 
     }
 
+    @FXML
+    public void getShareWithMe(MouseEvent mouseEvent){
+        progressBar.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);  //Running effect
+        ArrayList<FileObject> list;
+        FileObject fileObject = new FileObject();
+        fileObject.setParent("root");
+        list = new GetSharedFile().getList();
+
+        paneRoot.setCenter(nodeTemp1);
+        paneContent.getChildren().clear();
+
+        Image image = null;
+        for(FileObject object: list){
+            image = getImageByExtension(getFileExtension(object.getName()));
+            ImageView imageView = new ImageView(image);
+            imageView.setFitWidth(60);
+            imageView.setFitHeight(60);
+            Text text = new Text(handleNameFile(object.getName()));
+            VBox vBox = new VBox();
+            vBox.getChildren().addAll(imageView,text);
+            paneContent.getChildren().add(vBox);
+            vBox.setOnMouseClicked(e -> {
+                vBox.setBackground(new Background(new BackgroundFill(Color.web("#b2bec3"), CornerRadii.EMPTY, Insets.EMPTY)));
+            });
+        }
+        progressBar.setProgress(1);
+    }
+
     private void uploadFile(List<File> files){
         progressBar.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);
-        boolean result = SendFile.send(files);
+        boolean result = new SendFile().send(files);
         progressBar.setProgress(1);
         showAlert(result);
     }
@@ -160,6 +192,23 @@ public class Controller implements Initializable {
             alert.setHeaderText("Congratulations!!!");
             alert.setContentText("Your file has been uploaded completely.");
             alert.show();
+        }
+    }
+
+    private String handleNameFile(String nameFile){
+        return nameFile.substring(0,9)+"...";
+    }
+
+    private String getFileExtension(String fileName){
+        int index =fileName.lastIndexOf(".");
+        return fileName.substring(index+1);
+    }
+
+    private Image getImageByExtension(String extension){
+        try{
+            return image = new Image("images/"+extension+".png");
+        }catch (Exception e){
+            return image = new Image("images/file.png");
         }
     }
 
