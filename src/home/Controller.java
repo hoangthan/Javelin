@@ -4,9 +4,12 @@ import fileHandler.TokenFile;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -19,10 +22,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 import model.FileObject;
 import socketConnection.GetSharedFile;
-import socketConnection.SendFile;
+import socketConnection.TransferFile;
 import socketConnection.SendFileObject;
 
 import java.io.File;
@@ -102,10 +104,14 @@ public class Controller implements Initializable {
                 vBox.getChildren().addAll(imageView,text);
                 paneContent.getChildren().add(vBox);
                 vBox.setOnMouseClicked(e -> {
-                    if(++checked[j]%2==1)
+                    if(checked[j]==0){
+                        checked[j] = 1;
                         vBox.setBackground(new Background(new BackgroundFill(Color.web("#b2bec3"), CornerRadii.EMPTY, Insets.EMPTY)));
-                    else
+                    }
+                    else{
+                        checked[j] = 0;
                         vBox.setBackground(Background.EMPTY);
+                    }
                     vBox.setOnContextMenuRequested(new EventHandler<ContextMenuEvent>() {
                         @Override
                         public void handle(ContextMenuEvent event) {
@@ -183,7 +189,7 @@ public class Controller implements Initializable {
 
     private void uploadFile(List<File> files){
         progressBar.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);
-        boolean result = new SendFile().send(files);
+        boolean result = new TransferFile().upload(files);
         progressBar.setProgress(1);
         showAlert(result);
     }
@@ -194,13 +200,27 @@ public class Controller implements Initializable {
             alert.setTitle("Upload fail");
             alert.setHeaderText("Some thing went wrong. Try again.");
             alert.setContentText("-Check your internet connection.\n-Check your account.\n-Server can be error.");
-            alert.show();
+            alert.showAndWait();
+            new TokenFile().setToken(null);
+            goToLogin();
         }else{
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Upload file success.");
             alert.setHeaderText("Congratulations!!!");
             alert.setContentText("Your file has been uploaded completely.");
             alert.show();
+        }
+    }
+
+    private void goToLogin() {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/Login/Login.fxml"));
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) btnUpload.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -228,7 +248,7 @@ public class Controller implements Initializable {
         MenuItem share = new MenuItem("\uD83D\uDC65 Share");
         MenuItem cancel = new MenuItem(" Cancel ");
         contextMenu = new ContextMenu();
-        contextMenu.getItems().addAll(downnload,delete,rename,share);
+        contextMenu.getItems().addAll(downnload,delete,rename,share,cancel);
         downnload.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -271,8 +291,22 @@ public class Controller implements Initializable {
     }
 
     private void downloadEvent() {
-
+         ArrayList<FileObject> downloadList = new ArrayList<FileObject>();
+         for(int i=0;i<list.size();i++){
+             if(checked[i]==1)
+                 System.out.println("File id: "+list.get(i).getFileID());
+                 downloadList.add(list.get(i));
+         }
+         boolean result = new TransferFile().download(list);
+         if(result) showMessage("Download file successful.");
+         else showMessage("Some things went wrong. Try again.");
     }
 
+    private void showMessage(String content){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
 
 }

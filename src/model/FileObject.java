@@ -18,6 +18,15 @@ public class FileObject implements Serializable {
         this.parent = parent;
     }
 
+    public FileObject(long fileID, String name, long size, String URI, String parent, boolean isFile) {
+        this.fileID = fileID;
+        this.name = name;
+        this.size = size;
+        this.URI = URI;
+        this.parent = parent;
+        this.isFile = isFile;
+    }
+
     public FileObject(String name, long size, String URI, String parent, boolean isFile) {
         this.name = name;
         this.size = size;
