@@ -109,11 +109,11 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="Settings                  ">
+                  <JFXButton onMouseClicked="#exitEvent" prefHeight="100.0" prefWidth="202.0" style="-fx-background-color: #0F9C58;" text="Exit                        ">
                      <graphic>
                         <ImageView fx:id="btnSetting" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../res/settings.png" />
+                              <Image url="@../res/ic_exit.png" />
                            </image>
                         </ImageView>
                      </graphic>

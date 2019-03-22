@@ -99,7 +99,7 @@ public class Controller implements Initializable {
                 ImageView imageView = new ImageView(image);
                 imageView.setFitWidth(60);
                 imageView.setFitHeight(60);
-                Text text = new Text(handleNameFile(list.get(i).getName()));
+                Text text = new Text(handleNameFile(list.get(i).getName()).substring(0,9));
                 VBox vBox = new VBox();
                 vBox.getChildren().addAll(imageView,text);
                 paneContent.getChildren().add(vBox);
@@ -171,17 +171,26 @@ public class Controller implements Initializable {
         paneContent.getChildren().clear();
 
         Image image = null;
-        for(FileObject object: list){
-            image = getImageByExtension(getFileExtension(object.getName()));
+        checked = new int[list.size()];
+        for(int i=0;i<list.size();i++){
+            int j = i;
+            image = getImageByExtension(getFileExtension(list.get(i).getName()));
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(60);
             imageView.setFitHeight(60);
-            Text text = new Text(handleNameFile(object.getName()));
+            Text text = new Text(handleNameFile(list.get(i).getName()));
             VBox vBox = new VBox();
             vBox.getChildren().addAll(imageView,text);
             paneContent.getChildren().add(vBox);
             vBox.setOnMouseClicked(e -> {
-                vBox.setBackground(new Background(new BackgroundFill(Color.web("#b2bec3"), CornerRadii.EMPTY, Insets.EMPTY)));
+                if(checked[j]==0) {
+                    checked[j]  = 1;
+                    vBox.setBackground(new Background(new BackgroundFill(Color.web("#b2bec3"), CornerRadii.EMPTY, Insets.EMPTY)));
+                }
+                else if(checked[j]==1){
+                    checked[j]=0;
+                    vBox.setBackground(Background.EMPTY);
+                }
             });
         }
         progressBar.setProgress(1);
@@ -294,10 +303,16 @@ public class Controller implements Initializable {
          ArrayList<FileObject> downloadList = new ArrayList<FileObject>();
          for(int i=0;i<list.size();i++){
              if(checked[i]==1)
-                 System.out.println("File id: "+list.get(i).getFileID());
+             {
+                 System.out.println("Checked :"+i+": "+checked[i]);
                  downloadList.add(list.get(i));
+             }
          }
-         boolean result = new TransferFile().download(list);
+         if(downloadList.size()==0) {
+             showMessage("Choose at least one file.");
+             return;
+         }
+         boolean result = new TransferFile().download(downloadList);
          if(result) showMessage("Download file successful.");
          else showMessage("Some things went wrong. Try again.");
     }
@@ -307,6 +322,12 @@ public class Controller implements Initializable {
         alert.setHeaderText(null);
         alert.setContentText(content);
         alert.showAndWait();
+    }
+
+    @FXML
+    public void exitEvent(MouseEvent mouseEvent){
+        Stage stage = (Stage) btnUpload.getScene().getWindow();
+        stage.close();
     }
 
 }

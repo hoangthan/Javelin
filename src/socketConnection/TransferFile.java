@@ -19,8 +19,19 @@ public class TransferFile {
     ObjectOutputStream objectOutputStream = null;
 
     public boolean upload(List<File> files) {
+        String token = new TokenFile().getToken();
         try {
-            if(!handShake()) return false;                //If handshake to authentication false, terminate the communacation
+            socket = new Socket("localhost",2310);
+            dataInputStream = new DataInputStream(socket.getInputStream());
+            dataOutputStream =  new DataOutputStream(socket.getOutputStream());
+            System.out.println("Token in client: "+token);
+            dataOutputStream.writeUTF(token);             //Send the token to authentication
+            boolean auth = dataInputStream.readBoolean(); //Get the authenticaction result.
+
+            if(!auth){
+                return false;                             //If token is not valid, notice for client.
+            }
+
             dataOutputStream.writeUTF("upload");     //Send the message : I want to upload file.
             dataOutputStream.writeInt(files.size()  );      //Send number of file to server.
             for(File file: files){
@@ -39,25 +50,6 @@ public class TransferFile {
         return true;
     }
 
-    private boolean handShake() {
-        String token = new TokenFile().getToken();
-        boolean auth;
-        try {
-            socket = new Socket("localhost",2310);
-            dataInputStream = new DataInputStream(socket.getInputStream());
-            dataOutputStream =  new DataOutputStream(socket.getOutputStream());
-            objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
-            System.out.println("Token in client: "+token);
-            dataOutputStream.writeUTF(token);             //Send the token to authentication
-            auth = dataInputStream.readBoolean();         //Get the authenticaction result.
-            if(!auth){
-                return false;                             //If token is not valid, notice for client.
-            }
-        }catch (Exception e){
-            return false;
-        }
-        return auth;
-    }
 
     private  void sendFile(Socket socket, File file) throws IOException {
         DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
@@ -72,15 +64,30 @@ public class TransferFile {
         dos.close();
     }
 
+
     public boolean download(ArrayList<FileObject> list){
-        if(!handShake()) return false;
+        String token = new TokenFile().getToken();
         try {
-            objectOutputStream.writeObject(list);  //Send list file will download
+            socket = new Socket("localhost",2311);
+            dataInputStream = new DataInputStream(socket.getInputStream());
+            dataOutputStream =  new DataOutputStream(socket.getOutputStream());
+            objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
+
+            dataOutputStream.writeUTF(token);             //Send the token to authentication
+            boolean auth = dataInputStream.readBoolean(); //Get the authenticaction result.
+            if(!auth){
+                return false;                             //If token is not valid, notice for client.
+            }
+            dataOutputStream.writeUTF("download");     //Send the message : I want to upload file.
+            objectOutputStream.writeObject(list);          //Send list file will download
             for(FileObject fileObject : list){
-                fileSize = dataInputStream.readLong();  //Get the size of file
+                fileSize = dataInputStream.readLong();     //Get the size of file
                 if(fileSize==0) continue;
                 saveFile(fileObject.getName(), fileSize);
             }
+            dataInputStream.close();
+            dataOutputStream.close();
+            socket.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
