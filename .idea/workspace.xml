@@ -2,14 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/socketConnection/GetSharedFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/Home/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/Home/Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/Home/Controller$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/Home/Controller$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/Home/Controller$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/Home/Controller$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Javelin/Home/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/Home/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Javelin/socketConnection/SendFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/socketConnection/SendFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Home/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home/Home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/ic_file.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/socketConnection/SendFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socketConnection/SendFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/Home/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/Home/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/Home/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/Home/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/Home/Upload.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/Home/Upload.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/Model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/Model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/login/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/login/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/login/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/login/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/login/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/login/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/recoverPassword/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/recoverPassword/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/recoverPassword/RecoverPassWord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/recoverPassword/RecoverPassWord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/recoverPassword/RecoverPassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/recoverPassword/RecoverPassword.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/register/Controller$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/register/Controller$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/register/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/register/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Javelin/register/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Javelin/register/Register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home/Home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/Home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home/Upload.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/home/Upload.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/login/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/login/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recoverPassword/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recoverPassword/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recoverPassword/RecoverPassWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/recoverPassword/RecoverPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/recoverPassword/RecoverPassword.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/recoverPassword/RecoverPassword.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/register/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/register/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/register/Register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/register/Register.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,31 +89,59 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Home/Controller.java">
+        <entry file="file://$PROJECT_DIR$/src/home/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="95" column="80" selection-start-line="95" selection-start-column="80" selection-end-line="95" selection-end-column="80" />
+            <state relative-caret-position="305">
+              <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
               <folding>
                 <element signature="method#mouseDraged#0;class#Controller#0" />
                 <element signature="method#mousePressed#0;class#Controller#0" />
-                <element signature="e#2957#3112#0" />
+                <element signature="method#initialize#0;class#Controller#0" />
+                <element signature="class#3408:3622" />
+                <element signature="method#handle#0;class#3374:3652" />
                 <element signature="method#upload#0;class#Controller#0" />
-                <element signature="class#3279:3724" />
-                <element signature="method#handle#0;class#3279:3724" />
-                <element signature="class#3801:4060" />
-                <element signature="method#handle#0;class#3801:4060" />
-                <element signature="e#3952#4036#1" />
-                <element signature="class#4098:4324" />
-                <element signature="method#handle#0;class#4098:4324" />
+                <element signature="class#3301:3746" />
+                <element signature="method#handle#0;class#3301:3746" />
+                <element signature="class#3823:4082" />
+                <element signature="method#handle#0;class#3823:4082" />
+                <element signature="e#3974#4058#1" />
+                <element signature="class#4120:4346" />
+                <element signature="method#handle#0;class#4120:4346" />
+                <element signature="method#getShareWithMe#0;class#Controller#0" />
+                <element signature="e#4833#5449#1" />
+                <element signature="e#5290#5437#0" />
                 <element signature="method#uploadFile#0;class#Controller#0" />
                 <element signature="method#showAlert#0;class#Controller#0" />
-                <element signature="e#4643#4974#1" />
-                <element signature="e#4978#5265#1" />
+                <element signature="e#5801#6132#1" />
+                <element signature="e#6136#6423#1" />
                 <element signature="n#!!block;n#handleNameFile#0;n#Controller#0" />
                 <element signature="method#getFileExtension#0;class#Controller#0" />
+                <element signature="method#getImageByExtension#0;class#Controller#0" />
+                <element signature="e#6755#6832#0" />
+                <element signature="e#6851#6919#0" />
+                <element signature="method#initContextMenu#0;class#Controller#0" />
+                <element signature="class#7825:8003" />
+                <element signature="class#8253:8397" />
+                <element signature="class#8431:8575" />
+                <element signature="class#8608:8752" />
+                <element signature="class#8895:9039" />
+                <element signature="method#handle#0;class#8895:9039" />
+                <element signature="method#shareEvent#0;class#Controller#0" />
+                <element signature="method#renameEvent#0;class#Controller#0" />
+                <element signature="method#deleteEvent#0;class#Controller#0" />
+                <element signature="method#downloadEvent#0;class#Controller#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/home/Home.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" selection-start-line="3" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -123,6 +175,14 @@
       <find>2310</find>
       <find>m</find>
       <find>myDrive</find>
+      <find>edtPass</find>
+      <find>pgbLogin</find>
+      <find>ckbRemember</find>
+      <find>email is not va</find>
+      <find>105</find>
+      <find>104</find>
+      <find>contextMenu</find>
+      <find>checked</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -149,22 +209,15 @@
         <option value="$PROJECT_DIR$/src/CheckValid.java" />
         <option value="$PROJECT_DIR$/src/Controller/Validate.java" />
         <option value="$PROJECT_DIR$/src/controller/Validate.java" />
-        <option value="$PROJECT_DIR$/src/login/Login.java" />
         <option value="$PROJECT_DIR$/src/register/Register.java" />
         <option value="$PROJECT_DIR$/src/socketConnection/RequestEmail.java" />
-        <option value="$PROJECT_DIR$/src/register/Register.fxml" />
         <option value="$PROJECT_DIR$/src/Model/RegisterUser.java" />
-        <option value="$PROJECT_DIR$/src/login/Login.fxml" />
         <option value="$PROJECT_DIR$/src/Model/User.java" />
-        <option value="$PROJECT_DIR$/src/model/User.java" />
         <option value="$PROJECT_DIR$/src/model/File.java" />
         <option value="$PROJECT_DIR$/src/fileHandler/TokenFile.java" />
         <option value="$PROJECT_DIR$/src/socketConnection/RequestSocket.java" />
-        <option value="$PROJECT_DIR$/src/login/Controller.java" />
         <option value="$PROJECT_DIR$/src/recoverPassword/RecoverPassWord.java" />
-        <option value="$PROJECT_DIR$/src/recoverPassword/Controller.java" />
         <option value="$PROJECT_DIR$/src/recoverPassword/RecoverPassword.fxml" />
-        <option value="$PROJECT_DIR$/src/register/Controller.java" />
         <option value="$PROJECT_DIR$/src/Home/Home.java" />
         <option value="$PROJECT_DIR$/src/socketConnection/HandleFileObject.java" />
         <option value="$PROJECT_DIR$/src/controller/HandleFileObject.java" />
@@ -176,6 +229,16 @@
         <option value="$PROJECT_DIR$/src/socketConnection/SendFile.java" />
         <option value="$PROJECT_DIR$/src/socketConnection/GetSharedFile.java" />
         <option value="$PROJECT_DIR$/src/Home/Controller.java" />
+        <option value="$PROJECT_DIR$/src/login/Login.fxml" />
+        <option value="$PROJECT_DIR$/src/login/Login.java" />
+        <option value="$PROJECT_DIR$/token.txt" />
+        <option value="$PROJECT_DIR$/src/register/Register.fxml" />
+        <option value="$PROJECT_DIR$/src/register/Controller.java" />
+        <option value="$PROJECT_DIR$/src/login/Controller.java" />
+        <option value="$PROJECT_DIR$/src/model/User.java" />
+        <option value="$PROJECT_DIR$/src/recoverPassword/Controller.java" />
+        <option value="$PROJECT_DIR$/src/home/Home.java" />
+        <option value="$PROJECT_DIR$/src/home/Controller.java" />
       </list>
     </option>
   </component>
@@ -186,10 +249,11 @@
     <auto-save>true</auto-save>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="1380" />
-    <option name="height" value="745" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1358" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="886" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -202,6 +266,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -219,19 +284,18 @@
               <item name="Javelin" type="b2602c69:ProjectViewProjectNode" />
               <item name="Javelin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Javelin" type="b2602c69:ProjectViewProjectNode" />
               <item name="Javelin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="socketConnection" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,9 +312,9 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553022095024" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553221224499" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JavelinServer" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -258,6 +322,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
@@ -278,7 +343,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Home">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -298,12 +363,12 @@
       </method>
     </configuration>
     <configuration name="Home" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Home.Home" />
+      <option name="MAIN_CLASS_NAME" value="home.Home" />
       <module name="Javelin" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Home.*" />
+          <option name="PATTERN" value="home.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -327,8 +392,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RecoverPassWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="recoverPassword.RecoverPassWord" />
+    <configuration name="RecoverPassword" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="recoverPassword.RecoverPassword" />
       <module name="Javelin" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -422,9 +487,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Home" />
+        <item itemvalue="Application.RecoverPassword" />
         <item itemvalue="Application.Register" />
-        <item itemvalue="Application.RecoverPassWord" />
+        <item itemvalue="Application.Home" />
         <item itemvalue="Application.RequestSocket" />
         <item itemvalue="Application.SendEmail" />
       </list>
@@ -454,12 +519,13 @@
       <workItem from="1552649947590" duration="46122000" />
       <workItem from="1552840082881" duration="25095000" />
       <workItem from="1552906701716" duration="10333000" />
-      <workItem from="1552972724512" duration="20852000" />
+      <workItem from="1552972724512" duration="20951000" />
+      <workItem from="1553158436402" duration="31750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239708000" />
+    <option name="totallyTimeSpent" value="271557000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,10 +537,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1380" height="745" extended-state="0" />
+    <frame x="1358" y="-8" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.19621213" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.16902314" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" weight="0.12783661" />
       <window_info id="Designer" order="3" />
@@ -483,8 +549,8 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.25042018" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.48293516" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.25938568" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.29180887" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.3277311" />
@@ -497,7 +563,7 @@
       <window_info anchor="bottom" id="Messages" order="12" weight="0.13481228" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info active="true" anchor="bottom" id="Run" order="15" visible="true" weight="0.18259385" />
+      <window_info active="true" anchor="bottom" id="Run" order="15" visible="true" weight="0.22420909" />
       <window_info anchor="bottom" id="Terminal" order="16" weight="0.14675768" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -650,18 +716,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/register/Style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -683,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fileHandler/TokenFile.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -697,15 +744,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/Login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="17" column="245" selection-start-line="17" selection-start-column="214" selection-end-line="17" selection-end-column="245" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/recoverPassword/RecoverPassWord.java">
+    <entry file="file://$PROJECT_DIR$/src/recoverPassword/RecoverPassword.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
@@ -720,44 +759,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="244">
           <caret line="15" column="293" selection-start-line="15" selection-start-column="293" selection-end-line="15" selection-end-column="293" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/recoverPassword/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/register/Register.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/register/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="19" column="28" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="19" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/socketConnection/RequestSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -782,10 +783,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/ic_file.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Home/Home.fxml">
+    <entry file="file://$PROJECT_DIR$/src/images/ic_file.png" />
+    <entry file="file://$PROJECT_DIR$/src/home/Home.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="28">
@@ -793,7 +792,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Home/Upload.fxml">
+    <entry file="file://$PROJECT_DIR$/src/home/Upload.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -811,7 +810,7 @@
     <entry file="file://$PROJECT_DIR$/src/images/addFile.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Home/Style.css">
+    <entry file="file://$PROJECT_DIR$/src/home/Style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="33" />
@@ -836,38 +835,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/net/DualStackPlainSocketImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="80" column="47" lean-forward="true" selection-start-line="80" selection-start-column="47" selection-end-line="80" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/token.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" lean-forward="true" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/register/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="69" column="28" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initialize#0;class#Controller#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -882,16 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Home/Home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -918,28 +879,171 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Home/Controller.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="95" column="80" selection-start-line="95" selection-start-column="80" selection-end-line="95" selection-end-column="80" />
+        <state relative-caret-position="80">
+          <caret line="2547" selection-start-line="2547" selection-end-line="2547" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/Login.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/token.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/register/Register.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/register/Register.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/register/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="186" column="14" selection-start-line="186" selection-start-column="14" selection-end-line="186" selection-end-column="14" />
           <folding>
             <element signature="method#mouseDraged#0;class#Controller#0" />
             <element signature="method#mousePressed#0;class#Controller#0" />
-            <element signature="e#2957#3112#0" />
+            <element signature="method#minimize#0;class#Controller#0" />
+            <element signature="method#close#0;class#Controller#0" />
+            <element signature="method#sendUser#0;class#Controller#0" />
+            <element signature="method#initialize#0;class#Controller#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/login/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="100" selection-end-column="52" />
+          <folding>
+            <element signature="method#mouseDraged#0;class#Controller#0" />
+            <element signature="method#mousePressed#0;class#Controller#0" />
+            <element signature="method#minimize#0;class#Controller#0" />
+            <element signature="method#close#0;class#Controller#0" />
+            <element signature="method#showDialog#0;class#Controller#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/recoverPassword/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="method#mouseDraged#0;class#Controller#0" />
+            <element signature="method#mousePressed#0;class#Controller#0" />
+            <element signature="method#minimize#0;class#Controller#0" />
+            <element signature="method#close#0;class#Controller#0" />
+            <element signature="method#initialize#0;class#Controller#0" />
+            <element signature="method#goToLogin#0;class#Controller#0" />
+            <element signature="e#1612#1882#0" />
+            <element signature="e#1905#1949#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/socketConnection/RequestSocket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="431" column="13" selection-start-line="431" selection-start-column="13" selection-end-line="431" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/Home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" selection-start-line="3" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+          <folding>
+            <element signature="method#mouseDraged#0;class#Controller#0" />
+            <element signature="method#mousePressed#0;class#Controller#0" />
+            <element signature="method#initialize#0;class#Controller#0" />
+            <element signature="class#3408:3622" />
+            <element signature="method#handle#0;class#3374:3652" />
             <element signature="method#upload#0;class#Controller#0" />
-            <element signature="class#3279:3724" />
-            <element signature="method#handle#0;class#3279:3724" />
-            <element signature="class#3801:4060" />
-            <element signature="method#handle#0;class#3801:4060" />
-            <element signature="e#3952#4036#1" />
-            <element signature="class#4098:4324" />
-            <element signature="method#handle#0;class#4098:4324" />
+            <element signature="class#3301:3746" />
+            <element signature="method#handle#0;class#3301:3746" />
+            <element signature="class#3823:4082" />
+            <element signature="method#handle#0;class#3823:4082" />
+            <element signature="e#3974#4058#1" />
+            <element signature="class#4120:4346" />
+            <element signature="method#handle#0;class#4120:4346" />
+            <element signature="method#getShareWithMe#0;class#Controller#0" />
+            <element signature="e#4833#5449#1" />
+            <element signature="e#5290#5437#0" />
             <element signature="method#uploadFile#0;class#Controller#0" />
             <element signature="method#showAlert#0;class#Controller#0" />
-            <element signature="e#4643#4974#1" />
-            <element signature="e#4978#5265#1" />
+            <element signature="e#5801#6132#1" />
+            <element signature="e#6136#6423#1" />
             <element signature="n#!!block;n#handleNameFile#0;n#Controller#0" />
             <element signature="method#getFileExtension#0;class#Controller#0" />
+            <element signature="method#getImageByExtension#0;class#Controller#0" />
+            <element signature="e#6755#6832#0" />
+            <element signature="e#6851#6919#0" />
+            <element signature="method#initContextMenu#0;class#Controller#0" />
+            <element signature="class#7825:8003" />
+            <element signature="class#8253:8397" />
+            <element signature="class#8431:8575" />
+            <element signature="class#8608:8752" />
+            <element signature="class#8895:9039" />
+            <element signature="method#handle#0;class#8895:9039" />
+            <element signature="method#shareEvent#0;class#Controller#0" />
+            <element signature="method#renameEvent#0;class#Controller#0" />
+            <element signature="method#deleteEvent#0;class#Controller#0" />
+            <element signature="method#downloadEvent#0;class#Controller#0" />
           </folding>
         </state>
       </provider>

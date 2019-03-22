@@ -4,8 +4,6 @@
 <?import com.jfoenix.controls.JFXProgressBar?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ContextMenu?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -16,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane fx:id="paneRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="570.0" minWidth="900.0" prefHeight="597.0" prefWidth="900.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Home.Controller">
+<BorderPane fx:id="paneRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="570.0" minWidth="900.0" prefHeight="597.0" prefWidth="900.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.Controller">
    <top>
       <VBox prefHeight="116.0" prefWidth="898.0" BorderPane.alignment="CENTER">
          <children>
@@ -63,16 +61,6 @@
                      </opaqueInsets>
                   </TilePane>
                </content>
-               <contextMenu>
-                  <ContextMenu fx:id="contextMenu">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="⇩ Download" />
-                        <MenuItem mnemonicParsing="false" text="❌ Delete" />
-                        <MenuItem mnemonicParsing="false" text="📖 Rename" />
-                        <MenuItem mnemonicParsing="false" text="❌ Share" />
-                    </items>
-                  </ContextMenu>
-               </contextMenu>
             </ScrollPane>
          </children>
       </AnchorPane>

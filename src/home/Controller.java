@@ -1,15 +1,12 @@
-package Home;
+package home;
 
-import com.jfoenix.controls.JFXListView;
-import com.jfoenix.controls.JFXPopup;
 import fileHandler.TokenFile;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -22,6 +19,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import model.FileObject;
 import socketConnection.GetSharedFile;
 import socketConnection.SendFile;
@@ -31,7 +29,6 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -60,7 +57,8 @@ public class Controller implements Initializable {
 
     double x,y;
     private String token = new TokenFile().getToken();
-
+    private int[] checked = null;
+    private ArrayList<FileObject> list = null;
 
     @FXML
     void mouseDraged(MouseEvent event) {
@@ -78,31 +76,42 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         nodeTemp1 = paneRoot.getCenter();
+        initContextMenu();
     }
 
     @FXML
     public void myDrive(MouseEvent mouseEvent){
             progressBar.setProgress(ProgressIndicator.INDETERMINATE_PROGRESS);  //Running effect
-            ArrayList<FileObject> list;
             FileObject fileObject = new FileObject();
             fileObject.setParent("root");
             list = new SendFileObject().getResult(fileObject);
+            checked = new int[list.size()];
 
             paneRoot.setCenter(nodeTemp1);
             paneContent.getChildren().clear();
 
-            Image image = null;
-            for(FileObject object: list){
-                image = getImageByExtension(getFileExtension(object.getName()));
+            Image image;
+            for(int i = 0; i< list.size();i++){
+                final int j = i;
+                image = getImageByExtension(getFileExtension(list.get(i).getName()));
                 ImageView imageView = new ImageView(image);
                 imageView.setFitWidth(60);
                 imageView.setFitHeight(60);
-                Text text = new Text(handleNameFile(object.getName()));
+                Text text = new Text(handleNameFile(list.get(i).getName()));
                 VBox vBox = new VBox();
                 vBox.getChildren().addAll(imageView,text);
                 paneContent.getChildren().add(vBox);
                 vBox.setOnMouseClicked(e -> {
-                    vBox.setBackground(new Background(new BackgroundFill(Color.web("#b2bec3"), CornerRadii.EMPTY, Insets.EMPTY)));
+                    if(++checked[j]%2==1)
+                        vBox.setBackground(new Background(new BackgroundFill(Color.web("#b2bec3"), CornerRadii.EMPTY, Insets.EMPTY)));
+                    else
+                        vBox.setBackground(Background.EMPTY);
+                    vBox.setOnContextMenuRequested(new EventHandler<ContextMenuEvent>() {
+                        @Override
+                        public void handle(ContextMenuEvent event) {
+                            contextMenu.show(paneRoot, event.getScreenX(), event.getScreenY());
+                        }
+                    });
                 });
             }
             progressBar.setProgress(1);
@@ -211,5 +220,59 @@ public class Controller implements Initializable {
             return image = new Image("images/file.png");
         }
     }
+
+    public void initContextMenu(){
+        MenuItem downnload = new MenuItem("⇩ Download");
+        MenuItem delete = new MenuItem("❌ Delete");
+        MenuItem rename = new MenuItem("\uD83D\uDCD6 Rename");
+        MenuItem share = new MenuItem("\uD83D\uDC65 Share");
+        MenuItem cancel = new MenuItem(" Cancel ");
+        contextMenu = new ContextMenu();
+        contextMenu.getItems().addAll(downnload,delete,rename,share);
+        downnload.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                downloadEvent();
+            }
+        });
+        delete.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                deleteEvent();
+            }
+        });
+        rename.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                renameEvent();
+            }
+        });
+        share.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                shareEvent();
+            }
+        });
+        cancel.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                //Do nothings.
+            }
+        });
+    }
+
+    private void shareEvent() {
+    }
+
+    private void renameEvent() {
+    }
+
+    private void deleteEvent() {
+    }
+
+    private void downloadEvent() {
+
+    }
+
 
 }

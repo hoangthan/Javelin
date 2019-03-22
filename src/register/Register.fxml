@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="487.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="487.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.Controller">
     <center>
         <AnchorPane prefHeight="378.0" prefWidth="487.0" BorderPane.alignment="CENTER">
             <children>
@@ -25,7 +25,7 @@
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></Button>
-                <JFXProgressBar fx:id="pgbLogin" layoutX="42.0" layoutY="394.0" prefHeight="4.0" prefWidth="406.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+                <JFXProgressBar fx:id="pgbLogin" layoutX="42.0" layoutY="394.0" prefHeight="4.0" prefWidth="406.0" visible="false" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
             <JFXPasswordField fx:id="edtRePassword" focusColor="#008e9d" labelFloat="true" prefHeight="30.0" prefWidth="310.0" promptText="Password again" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="202.0" />
             <JFXTextField fx:id="edtCode" focusColor="#008e9d" labelFloat="true" layoutX="90.0" layoutY="253.0" prefHeight="30.0" prefWidth="235.0" promptText="Code" style="-fx-region-border: #f44336;" unFocusColor="#008e9d" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="162.0" AnchorPane.topAnchor="260.0" />
             <Text fx:id="lbSendCode" fill="#0f9c58" layoutX="331.96875" layoutY="285.0" onMousePressed="#sendActiveCode" strokeType="OUTSIDE" strokeWidth="0.0" text="Send code" AnchorPane.rightAnchor="90.03515625" AnchorPane.topAnchor="275.0">
@@ -44,7 +44,7 @@
                <children>
                   <HBox alignment="CENTER_LEFT" onMouseDragged="#mouseDraged" onMousePressed="#mousePressed" prefHeight="27.0" prefWidth="304.0">
                      <children>
-                        <FontAwesomeIconView fill="WHITE" size="15" text="🡸">
+                        <FontAwesomeIconView fill="WHITE" onMouseClicked="#goToLogin" size="15" text="🡸">
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin>

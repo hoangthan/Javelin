@@ -1,6 +1,9 @@
 package register;
 
 import fileHandler.TokenFile;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import model.User;
 import controller.Validate;
 import javafx.fxml.FXML;
@@ -68,6 +71,9 @@ public class Controller implements Initializable {
 
     @FXML
     void register(MouseEvent event) throws IOException {
+        if(event.getEventType()!=MouseEvent.MOUSE_PRESSED) {
+            return;
+        }
         if(Validate.checkEmail(edtEmail.getText().toLowerCase().trim()))
         {
             if(edtPassword.getText().equals(edtRePassword.getText()))
@@ -133,6 +139,9 @@ public class Controller implements Initializable {
     @FXML
     public void sendActiveCode(MouseEvent event)
     {
+        if(event.getEventType()!=MouseEvent.MOUSE_PRESSED) {
+            return;
+        }
         boolean isSuccess;
         pgbLogin.setVisible(true);
         if(!Validate.checkEmail(edtEmail.getText().trim()))
@@ -170,6 +179,19 @@ public class Controller implements Initializable {
             lbNoti.setVisible(true);
             e.printStackTrace();
         } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void goToLogin(MouseEvent mouseEvent){
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/Login/Login.fxml"));
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) edtEmail.getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
